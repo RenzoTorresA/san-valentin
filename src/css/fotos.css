@@ -1,0 +1,42 @@
+/* Hace que el fondo rosa cubra toda la pantalla */
+body {
+    background-color: pink;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Hace que ocupe el 100% de la altura de la pantalla */
+    overflow: hidden; /* Evita el scroll vertical */
+}
+/* Contenedor principal */
+.carousel {
+    width: 100%; /* Ocupa todo el ancho */
+    overflow: hidden; /* Oculta lo que está fuera del contenedor */
+    background-color: pink; /* Fondo rosado */
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    white-space: nowrap; /* Evita que las imágenes se vayan a la siguiente línea */
+}
+
+/* Track de imágenes */
+.carousel-track {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: scroll-horizontal 15s linear infinite; /* Animación infinita */
+}
+
+/* Imágenes */
+.carousel-track img {
+    width: 200px; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Animación de desplazamiento horizontal */
+@keyframes scroll-horizontal {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
