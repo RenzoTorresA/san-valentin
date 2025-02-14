@@ -5,6 +5,14 @@ let noButtonState = 0; // Estado actual del botón "No"
 document.getElementById('gifContainer').style.display = 'block';
 
 document.getElementById('siBtn').addEventListener('click', function() {
+    let button = this; 
+    button.classList.add("animate-out"); // Agrega la animación
+
+    setTimeout(function() {
+        window.location.href = "main.html"; // Redirige después de la animación
+    }, 2000); // 1000ms = 1s (duración de la animación)
+
+
     // Ocultar el gif triste y mostrar el gif feliz
     document.getElementById('sadGifContainer').style.display = 'none';
     document.getElementById('sadGifContainer1').style.display = 'none';
